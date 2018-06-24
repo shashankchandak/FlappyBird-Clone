@@ -73,8 +73,6 @@ public class FlappyBird extends ApplicationAdapter {
 	public void create () {
 
 		prefs=Gdx.app.getPreferences("My preferences");
-
-
 		batch = new SpriteBatch();
 		background=new Texture("bg.png");
 		gameoverscreen=new Texture("gameovers.png");
@@ -84,7 +82,7 @@ public class FlappyBird extends ApplicationAdapter {
 		soundchoice=0;
 		camera=new OrthographicCamera();
 		camera.setToOrtho(false, 800, 480);
-	//	//shapeRenderer=new ShapeRenderer();
+	//	shapeRenderer=new ShapeRenderer();
 		birdCircle=new Circle();
 		gamemusic=Gdx.audio.newMusic(Gdx.files.internal("flappymusic.mp3"));
 		gamemusic.setLooping(true);
@@ -122,15 +120,18 @@ public class FlappyBird extends ApplicationAdapter {
 
 		startGame();
 
-
 	}
 
 	public void startGame(){
 
 		for(int i=0;i<numberOfTubes;i++){
+
 			tubeX[i]=Gdx.graphics.getWidth()/2-topTube.getWidth()/2+Gdx.graphics.getWidth()*3/4+i*distanceBetweenTubes;
+
 			tubeOffset[i]=(randomGenerator.nextFloat()-0.5f)*(Gdx.graphics.getHeight()-gap-200);
+
 			topTubeRectangles[i]=new Rectangle();
+
 			bottomTubeRectangles[i]=new Rectangle();
 		}
 
