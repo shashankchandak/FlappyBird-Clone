@@ -32,8 +32,6 @@ public class FlappyBird extends ApplicationAdapter {
 	Music gamemusic;
 	Music gameover;
 
-
-
 	int flapstate=0;
 	int gamestate=0;
 	float birdY=0;
